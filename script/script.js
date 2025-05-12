@@ -1,7 +1,7 @@
 const lijstToDo = [
   {vak: "Frans", id: 1, af: "False"},
   {vak: "wiskunde", id: 2, af: "True"},
-  {vak: "Nederlands", id: 3, af: "False"}
+  {vak: "Nederlands", id: 3, af: "True"}
 ]
 
 const winkels = [
@@ -26,12 +26,13 @@ form.addEventListener("submit", function (e) {
     li.addEventListener("click", function () {
       li.classList.toggle("completed");
     });
-    
+
     list.appendChild(li);
     input.value = "";
   }
 
 });
+
 
 
 
@@ -57,4 +58,6 @@ form.appendChild(selectbox)
    optie.id = brand.id
    optie.innerHTML = brand.winkel
    selectbox.appendChild(optie)
+   console.log(optie);
  })
+
