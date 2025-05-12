@@ -5,9 +5,11 @@ const lijstToDo = [
 ]
 
 const winkels = [
-  {winkel: "Aldi", id: 1},
+  {winkel: "Geen Winkel", id: 1},
   {winkel: "Lidl", id: 2},
-  {winkel: "Delhaize", id: 3}
+  {winkel: "Delhaize", id: 3},
+  {winkel: "Aldi", id: 4},
+  {winkel: "Colruyt", id: 5}
 ]
 
 
@@ -24,10 +26,13 @@ form.addEventListener("submit", function (e) {
     li.addEventListener("click", function () {
       li.classList.toggle("completed");
     });
+    
     list.appendChild(li);
     input.value = "";
   }
+
 });
+
 
 
 lijstToDo.forEach((richting) =>{
@@ -43,4 +48,13 @@ lijstToDo.forEach((richting) =>{
   list.appendChild(nieuweLijst)
 })
 
+const selectbox = document.createElement("select")
+form.appendChild(selectbox)
 
+
+ winkels.forEach((brand) =>{
+   const optie = document.createElement("option")
+   optie.id = brand.id
+   optie.innerHTML = brand.winkel
+   selectbox.appendChild(optie)
+ })
