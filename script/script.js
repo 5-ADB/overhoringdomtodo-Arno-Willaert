@@ -1,3 +1,4 @@
+// een todolijst met vak? 
 const lijstToDo = [
   {vak: "Frans", id: 1, af: "False"},
   {vak: "wiskunde", id: 2, af: "True"},
@@ -35,11 +36,14 @@ form.addEventListener("submit", function (e) {
 
 
 
-
+// wat is richting?? 
 lijstToDo.forEach((richting) =>{
+  // je maakt een lijst item - geen nieuwe lijst
   const nieuweLijst = document.createElement('li')
   nieuweLijst.id = richting.id
   nieuweLijst.innerHTML = richting.vak
+
+  // je zet hier enkele stappen teveel
   nieuweLijst.addEventListener("click", function () {
     nieuweLijst.classList.toggle("completed")
   })
